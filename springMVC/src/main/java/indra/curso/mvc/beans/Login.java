@@ -1,9 +1,13 @@
 package indra.curso.mvc.beans;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Login {
 	
 	private String usuario,clave;
 
+	
 	public String getUsuario() {
 		return usuario;
 	}
