@@ -1,0 +1,16 @@
+package configuracion;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+
+@Configuration
+@ComponentScan(value={"musicos","instrumentos","aspectos"})
+@EnableAspectJAutoProxy
+public class Configuracion  {
+
+
+
+
+
+}

@@ -1,0 +1,11 @@
+#Tue Feb 19 12:01:43 CET 2019
+vl=How many times the 'Finish' button pressed during the day
+l=Wizard class name
+ct=jbt
+d=1550574103657
+c=0
+cmp=usage
+a=finishWizard
+cl=org.springframework.ide.eclipse.wizard.template.NewSpringProjectWizard
+v=2.2.102
+s=1

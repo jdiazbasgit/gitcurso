@@ -1,5 +1,5 @@
-GitRepositoriesView.GitDirectories=
-GitRepositoriesView.GitDirectories.relative=/Users/javierdiaz/git/talento_back/.git\:
+GitRepositoriesView.GitDirectories=/Users/javierdiaz/Documents/cursos/talento/back/.git\:/Users/javierdiaz/gitConcierto/.git\:/Users/javierdiaz/git/concierto/.git\:/Users/javierdiaz/git/gesvoto_services/.git\:
+GitRepositoriesView.GitDirectories.relative=.git\:/Users/javierdiaz/gitConcierto/.git\:/Users/javierdiaz/git/concierto/.git\:/Users/javierdiaz/git/gesvoto_services/.git\:
 core_autoIgnoreDerivedResources=false
 core_preferredMergeStrategy=jgit-default-mergeStrategy
 eclipse.preferences.version=1

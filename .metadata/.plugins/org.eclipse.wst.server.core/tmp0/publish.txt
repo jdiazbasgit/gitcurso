@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Wed Feb 20 13:14:02 CET 2019
+org.eclipse.jst.jee.server\:/binary\:/Users/javierdiaz/.m2/repository/org/springframework/spring-web/4.1.1.RELEASE/spring-web-4.1.1.RELEASE.jar=/Users/javierdiaz/Downloads/apache-tomcat-7.0.88/wtpwebapps/springMVC/WEB-INF/lib/spring-web-4.1.1.RELEASE.jar
+org.eclipse.jst.jee.server\:primerWeb=/Users/javierdiaz/Downloads/apache-tomcat-7.0.88/wtpwebapps/primerWeb
+org.eclipse.jst.jee.server\:springMVC=/Users/javierdiaz/Downloads/apache-tomcat-7.0.88/wtpwebapps/springMVC

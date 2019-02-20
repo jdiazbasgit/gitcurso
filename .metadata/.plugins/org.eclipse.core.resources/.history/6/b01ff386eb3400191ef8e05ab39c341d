@@ -1,0 +1,18 @@
+package test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import excepciones.InstrumentoRotoException;
+import instrumentos.Instrumento;
+
+class TestInstrumento {
+
+	@Test
+	void test() throws InstrumentoRotoException {
+		Instrumento instrumento= new Instrumento();
+		assertNull(instrumento.sonar());
+	}
+
+}

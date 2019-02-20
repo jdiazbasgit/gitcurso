@@ -1,0 +1,41 @@
+package test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.runners.MockitoJUnitRunner;
+
+import excepciones.InstrumentoRotoException;
+import instrumentos.Instrumento;
+import instrumentos.Tambor;
+
+@RunWith(MockitoJUnitRunner.class)
+class TestInstrumento {
+
+	@InjectMocks
+	private Tambor tambor;
+	
+	
+	
+	@Test
+	void test() throws InstrumentoRotoException {
+		
+		String sonido=getTambor().sonar();
+		assertNotNull(sonido);
+	}
+
+	public Tambor getTambor() {
+		return tambor;
+	}
+
+	public void setTambor(Tambor tambor) {
+		this.tambor = tambor;
+	}
+
+	
+
+}

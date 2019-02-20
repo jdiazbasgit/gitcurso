@@ -1,0 +1,5 @@
+package indra.curso.mvc.configuracion;
+
+public class Configuracion {
+
+}

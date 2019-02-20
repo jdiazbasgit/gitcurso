@@ -1,0 +1,93 @@
+package indra.gesvoto.services.datos;
+
+import java.io.Serializable;
+import javax.persistence.*;
+import java.util.Date;
+import java.util.List;
+
+
+/**
+ * The persistent class for the CONCURSOS database table.
+ * 
+ */
+@Entity
+@Table(name="CONCURSOS")
+@NamedQuery(name="Concurso.findAll", query="SELECT c FROM Concurso c")
+public class Concurso implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
+
+	@Column(nullable=false, length=45)
+	private String descripcion;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(nullable=false)
+	private Date fecha;
+
+	@Column(nullable=false, length=45)
+	private String titulo;
+
+	//bi-directional many-to-many association to Producto
+	@ManyToMany(mappedBy="concursos")
+	private List<Producto> productos;
+
+	//bi-directional many-to-one association to Role
+	@ManyToOne
+	@JoinColumn(name="ROLES_ID", nullable=false, insertable=false, updatable=false)
+	private Role role;
+
+	public Concurso() {
+	}
+
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getDescripcion() {
+		return this.descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public Date getFecha() {
+		return this.fecha;
+	}
+
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
+	}
+
+	public String getTitulo() {
+		return this.titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public List<Producto> getProductos() {
+		return this.productos;
+	}
+
+	public void setProductos(List<Producto> productos) {
+		this.productos = productos;
+	}
+
+	public Role getRole() {
+		return this.role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
+	}
+
+}

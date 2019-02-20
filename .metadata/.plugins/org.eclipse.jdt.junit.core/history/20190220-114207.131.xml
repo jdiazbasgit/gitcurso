@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="HomeControllerTest" project="springMVC" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="indra.curso.mvc.HomeControllerTest" time="0.085">
+    <testcase name="test" classname="indra.curso.mvc.HomeControllerTest" time="0.085"/>
+  </testsuite>
+</testrun>

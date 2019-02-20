@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="HomeControllerTest" project="springMVC" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="indra.curso.mvc.HomeControllerTest" time="0.001">
+    <testcase name="test" classname="indra.curso.mvc.HomeControllerTest" time="0.001">
+      <error>org.mockito.exceptions.base.MockitoException: Field 'homeController' annotated with @InjectMocks is null.
+Please make sure the instance is created *before* MockitoAnnotations.initMocks();
+Example of correct usage:
+   class SomeTest {
+      @InjectMocks private Foo foo = new Foo();
+      
+      @Before public void setUp() {
+         MockitoAnnotations.initMock(this);
+
+	at org.mockito.internal.runners.JUnit45AndHigherRunnerImpl$1.withBefores(JUnit45AndHigherRunnerImpl.java:27)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:262)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.mockito.internal.runners.JUnit45AndHigherRunnerImpl.run(JUnit45AndHigherRunnerImpl.java:37)
+	at org.mockito.runners.MockitoJUnitRunner.run(MockitoJUnitRunner.java:62)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

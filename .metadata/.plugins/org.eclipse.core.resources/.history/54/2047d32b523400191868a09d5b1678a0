@@ -1,0 +1,68 @@
+package indra.gesvoto.services.datos;
+
+import java.io.Serializable;
+import javax.persistence.*;
+
+/**
+ * The primary key class for the PRODUCTO database table.
+ * 
+ */
+@Embeddable
+public class ProductoPK implements Serializable {
+	//default serial version id, required for serializable classes.
+	private static final long serialVersionUID = 1L;
+	private int id;
+	private int concursosId;
+	private int concursosRolesId;
+
+	public ProductoPK() {
+	}
+
+	@Column(unique=true, nullable=false)
+	public int getId() {
+		return this.id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	@Column(name="CONCURSOS_ID", unique=true, nullable=false)
+	public int getConcursosId() {
+		return this.concursosId;
+	}
+	public void setConcursosId(int concursosId) {
+		this.concursosId = concursosId;
+	}
+
+	@Column(name="CONCURSOS_ROLES_ID", unique=true, nullable=false)
+	public int getConcursosRolesId() {
+		return this.concursosRolesId;
+	}
+	public void setConcursosRolesId(int concursosRolesId) {
+		this.concursosRolesId = concursosRolesId;
+	}
+
+	public boolean equals(Object other) {
+		if (this == other) {
+			return true;
+		}
+		if (!(other instanceof ProductoPK)) {
+			return false;
+		}
+		ProductoPK castOther = (ProductoPK)other;
+		return 
+			(this.id == castOther.id)
+			&& (this.concursosId == castOther.concursosId)
+			&& (this.concursosRolesId == castOther.concursosRolesId);
+	}
+
+	public int hashCode() {
+		final int prime = 31;
+		int hash = 17;
+		hash = hash * prime + this.id;
+		hash = hash * prime + this.concursosId;
+		hash = hash * prime + this.concursosRolesId;
+		
+		return hash;
+	}
+}

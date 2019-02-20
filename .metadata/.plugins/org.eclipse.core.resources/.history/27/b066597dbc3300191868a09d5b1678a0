@@ -1,0 +1,22 @@
+package indra.gesvoto.services.datos;
+
+import java.util.List;
+
+public class Usuarioyroles {
+
+	
+	private List<Role> roles;
+	private Usuario usuario;
+	public List<Role> getRoles() {
+		return roles;
+	}
+	public void setRoles(List<Role> roles) {
+		this.roles = roles;
+	}
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+}

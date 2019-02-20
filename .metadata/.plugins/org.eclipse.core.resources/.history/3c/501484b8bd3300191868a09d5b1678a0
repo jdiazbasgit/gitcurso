@@ -1,0 +1,69 @@
+package indra.gesvoto.services.datos;
+
+import java.io.Serializable;
+import javax.persistence.*;
+import java.util.Set;
+
+
+/**
+ * The persistent class for the PRODUCTO database table.
+ * 
+ */
+@Entity
+@Table(name="PRODUCTO")
+@NamedQuery(name="Producto.findAll", query="SELECT p FROM Producto p")
+public class Producto implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@EmbeddedId
+	private ProductoPK id;
+
+	@Column(nullable=false, length=45)
+	private String descripcion;
+
+	//bi-directional many-to-one association to Marca
+	@OneToMany(mappedBy="producto")
+	private Set<Marca> marcas;
+
+	public Producto() {
+	}
+
+	public ProductoPK getId() {
+		return this.id;
+	}
+
+	public void setId(ProductoPK id) {
+		this.id = id;
+	}
+
+	public String getDescripcion() {
+		return this.descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public Set<Marca> getMarcas() {
+		return this.marcas;
+	}
+
+	public void setMarcas(Set<Marca> marcas) {
+		this.marcas = marcas;
+	}
+
+	public Marca addMarca(Marca marca) {
+		getMarcas().add(marca);
+		marca.setProducto(this);
+
+		return marca;
+	}
+
+	public Marca removeMarca(Marca marca) {
+		getMarcas().remove(marca);
+		marca.setProducto(null);
+
+		return marca;
+	}
+
+}

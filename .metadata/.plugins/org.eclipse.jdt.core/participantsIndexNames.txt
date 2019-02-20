@@ -1,3 +1,9 @@
 INDEX VERSION 1.130
+/Users/javierdiaz/Documents/cursos/talento/back/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3876286706.index
+/gesvoto_services/src/test
 /Users/javierdiaz/Documents/cursos/talento/back/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2743516562.index
 /Prueba/src/main/java
+/Users/javierdiaz/Documents/cursos/talento/back/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/968959310.index
+/primerWeb/src
+/Users/javierdiaz/Documents/cursos/talento/back/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/474145167.index
+/springMVC/src/main/java

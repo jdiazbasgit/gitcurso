@@ -1,0 +1,61 @@
+package tags;
+
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.tagext.BodyTagSupport;
+
+public class RepeticionesBodyTag extends BodyTagSupport {
+
+	private String texto;
+	private int cantidad;
+	private int contador;
+	
+		
+	
+	
+	@Override
+	public int doStartTag() throws JspException {
+		// TODO Auto-generated method stub
+		return super.doStartTag();
+	}
+	
+	
+	@Override
+	public int doAfterBody() throws JspException {
+		// TODO Auto-generated method stub
+		return super.doAfterBody();
+	}
+	
+	
+	@Override
+	public int doEndTag() throws JspException {
+		// TODO Auto-generated method stub
+		return super.doEndTag();
+	}
+	
+
+	
+	
+	public String getTexto() {
+		return texto;
+	}
+	public void setTexto(String texto) {
+		this.texto = texto;
+	}
+	public int getCantidad() {
+		return cantidad;
+	}
+	public void setCantidad(int cantidad) {
+		this.cantidad = cantidad;
+	}
+
+
+	public int getContador() {
+		return contador;
+	}
+
+
+	public void setContador(int contador) {
+		this.contador = contador;
+	}
+	
+}

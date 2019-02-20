@@ -1,0 +1,100 @@
+package indra.gesvoto.services.datos;
+
+import java.io.Serializable;
+import javax.persistence.*;
+import java.util.List;
+
+
+/**
+ * The persistent class for the CONCEPTOS database table.
+ * 
+ */
+@Entity
+@Table(name="CONCEPTOS")
+@NamedQuery(name="Concepto.findAll", query="SELECT c FROM Concepto c")
+public class Concepto implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(unique=true, nullable=false)
+	private int id;
+
+	@Column(nullable=false, length=45)
+	private String descripcion;
+
+	@Column(nullable=false)
+	private int maximo;
+
+	@Column(nullable=false)
+	private int minimo;
+
+	//bi-directional many-to-many association to Marca
+	@ManyToMany
+	@JoinTable(
+		name="MARCAS_CONCEPTOS"
+		, joinColumns={
+			@JoinColumn(name="CONCEPTOS_ID", nullable=false)
+			}
+		, inverseJoinColumns={
+			@JoinColumn(name="MARCAS_ID", referencedColumnName="ID", nullable=false)
+			}
+		)
+	private List<Marca> marcas;
+
+	//bi-directional many-to-many association to Voto
+	@ManyToMany(mappedBy="conceptos")
+	private List<Voto> votos;
+
+	public Concepto() {
+	}
+
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getDescripcion() {
+		return this.descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public int getMaximo() {
+		return this.maximo;
+	}
+
+	public void setMaximo(int maximo) {
+		this.maximo = maximo;
+	}
+
+	public int getMinimo() {
+		return this.minimo;
+	}
+
+	public void setMinimo(int minimo) {
+		this.minimo = minimo;
+	}
+
+	public List<Marca> getMarcas() {
+		return this.marcas;
+	}
+
+	public void setMarcas(List<Marca> marcas) {
+		this.marcas = marcas;
+	}
+
+	public List<Voto> getVotos() {
+		return this.votos;
+	}
+
+	public void setVotos(List<Voto> votos) {
+		this.votos = votos;
+	}
+
+}

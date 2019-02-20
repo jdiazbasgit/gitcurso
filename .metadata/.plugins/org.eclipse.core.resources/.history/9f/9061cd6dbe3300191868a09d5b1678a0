@@ -1,0 +1,79 @@
+package indra.gesvoto.services.datos;
+
+import java.io.Serializable;
+import javax.persistence.*;
+
+/**
+ * The primary key class for the CONCEPTOS database table.
+ * 
+ */
+@Embeddable
+public class ConceptoPK implements Serializable {
+	//default serial version id, required for serializable classes.
+	private static final long serialVersionUID = 1L;
+	private int id;
+	private int marcasId;
+	private int marcasProductoId;
+	private int votosId;
+
+	public ConceptoPK() {
+	}
+
+	@Column(unique=true, nullable=false)
+	public int getId() {
+		return this.id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	@Column(name="MARCAS_ID", unique=true, nullable=false)
+	public int getMarcasId() {
+		return this.marcasId;
+	}
+	public void setMarcasId(int marcasId) {
+		this.marcasId = marcasId;
+	}
+
+	@Column(name="MARCAS_PRODUCTO_ID", unique=true, nullable=false)
+	public int getMarcasProductoId() {
+		return this.marcasProductoId;
+	}
+	public void setMarcasProductoId(int marcasProductoId) {
+		this.marcasProductoId = marcasProductoId;
+	}
+
+	@Column(name="VOTOS_ID", unique=true, nullable=false)
+	public int getVotosId() {
+		return this.votosId;
+	}
+	public void setVotosId(int votosId) {
+		this.votosId = votosId;
+	}
+
+	public boolean equals(Object other) {
+		if (this == other) {
+			return true;
+		}
+		if (!(other instanceof ConceptoPK)) {
+			return false;
+		}
+		ConceptoPK castOther = (ConceptoPK)other;
+		return 
+			(this.id == castOther.id)
+			&& (this.marcasId == castOther.marcasId)
+			&& (this.marcasProductoId == castOther.marcasProductoId)
+			&& (this.votosId == castOther.votosId);
+	}
+
+	public int hashCode() {
+		final int prime = 31;
+		int hash = 17;
+		hash = hash * prime + this.id;
+		hash = hash * prime + this.marcasId;
+		hash = hash * prime + this.marcasProductoId;
+		hash = hash * prime + this.votosId;
+		
+		return hash;
+	}
+}

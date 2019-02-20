@@ -1,0 +1,64 @@
+package indra.gesvoto.services.datos;
+
+import java.io.Serializable;
+import javax.persistence.*;
+
+
+/**
+ * The persistent class for the CONCEPTOS database table.
+ * 
+ */
+@Entity
+@Table(name="CONCEPTOS")
+@NamedQuery(name="Concepto.findAll", query="SELECT c FROM Concepto c")
+public class Concepto implements Serializable {
+	private static final long serialVersionUID = 1L;
+	private ConceptoPK id;
+	private String descripcion;
+	private int maximo;
+	private int minimo;
+
+	public Concepto() {
+	}
+
+
+	@EmbeddedId
+	public ConceptoPK getId() {
+		return this.id;
+	}
+
+	public void setId(ConceptoPK id) {
+		this.id = id;
+	}
+
+
+	@Column(nullable=false, length=45)
+	public String getDescripcion() {
+		return this.descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+
+	@Column(nullable=false)
+	public int getMaximo() {
+		return this.maximo;
+	}
+
+	public void setMaximo(int maximo) {
+		this.maximo = maximo;
+	}
+
+
+	@Column(nullable=false)
+	public int getMinimo() {
+		return this.minimo;
+	}
+
+	public void setMinimo(int minimo) {
+		this.minimo = minimo;
+	}
+
+}
