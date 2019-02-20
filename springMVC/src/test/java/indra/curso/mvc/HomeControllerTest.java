@@ -14,26 +14,21 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 import indra.curso.mvc.configuracion.Configuracion;
 
-
-
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes= {Configuracion.class})
+@ContextConfiguration(classes = { Configuracion.class })
 @WebAppConfiguration
-@TestExecutionListeners(inheritListeners = false, listeners =
-{DependencyInjectionTestExecutionListener.class, DirtiesContextTestExecutionListener.class})
+@TestExecutionListeners(inheritListeners = false, listeners = { DependencyInjectionTestExecutionListener.class,
+		DirtiesContextTestExecutionListener.class })
 
 public class HomeControllerTest {
 
 	@Autowired
 	private HomeController homeController;
-	
-	
-	
+
 	@Test
 	public void test() {
-		
+
 		assertNotNull(homeController.home());
 	}
 
-	
 }

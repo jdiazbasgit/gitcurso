@@ -8,12 +8,12 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages= {"indra.curso.mvc"})
+@ComponentScan(basePackages = { "indra.curso.mvc" })
 public class Configuracion {
 
 	@Bean
-	public InternalResourceViewResolver getInternalResourceViewResolver(){
-		InternalResourceViewResolver resolver= new InternalResourceViewResolver();
+	public InternalResourceViewResolver getInternalResourceViewResolver() {
+		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
 		resolver.setPrefix("/WEB-INF/views/");
 		resolver.setSuffix(".jsp");
 		return resolver;
