@@ -19,8 +19,6 @@ import indra.curso.mvc.configuracion.Configuracion;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes= {Configuracion.class})
 @WebAppConfiguration
-@TestExecutionListeners(inheritListeners = false, listeners =
-{DependencyInjectionTestExecutionListener.class, DirtiesContextTestExecutionListener.class})
 
 public class HomeControllerTest {
 
