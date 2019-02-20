@@ -34,5 +34,11 @@ public class HomeControllerTest {
 		
 		assertNotNull(homeController.home());
 	}
+	
+//	@Test
+//	public void holaTest() {
+//		
+//		assertNotNull(homeController.dimeAlgo(nombre, apellido));
+//	}
 
 }
