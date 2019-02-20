@@ -1,7 +1,0 @@
-INDEX VERSION 1.4+/Users/javierdiaz/Documents/cursos/talento/back/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-43575000.index
-2536190918.index
-3225625406.index
-2741362260.index
-3630617667.index
-3867207215.index
