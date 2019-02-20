@@ -108,9 +108,15 @@
 				
 		<!-- Servlet -->
 		<dependency>
+<<<<<<< HEAD
 			<groupId>javax.servle t</groupId>
 			<artifactId>servlet-api</artifactId>
 			<version>2.5</version>
+=======
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+>>>>>>> origin/master
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -129,7 +135,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.7</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>        
 	</dependencies>
