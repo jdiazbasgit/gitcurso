@@ -12,6 +12,7 @@ import org.springframework.test.context.support.DependencyInjectionTestExecution
 import org.springframework.test.context.support.DirtiesContextTestExecutionListener;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import indra.curso.mvc.beans.Login;
 import indra.curso.mvc.configuracion.Configuracion;
 
 
@@ -27,12 +28,31 @@ public class HomeControllerTest {
 	@Autowired
 	private HomeController homeController;
 	
+	private Login login=new Login();
 	
 	
 	@Test
-	public void test() {
+	public void testHome() {
 		
 		assertNotNull(homeController.home());
 	}
+	
+	@Test
+	public void testLogin() {
+		
+		login.setUsuario("pepe");
+		login.setClave("1234");
+		assertNotNull(homeController.login(login));
+	}
+	
+	@Test
+	public void testDimeAlgo() {
+		
+		assertNotNull(homeController.dimeAlgo(login.getUsuario(),login.getClave()));
+	}
+	
+	
+	
+	
 
 }
