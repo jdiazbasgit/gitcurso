@@ -34,9 +34,9 @@ public class HomeController {
 	public ModelAndView login(Login login) {
 		ModelAndView modelAndView = new ModelAndView();
 
-		String texto = "USUARIO ERRONELO";
+		String texto = "Usuario erróneo";
 		if (login.getUsuario().equals("pepe") && login.getClave().equals("1234"))
-			texto = "USUARIO CORRECTO";
+			texto = "Usuario correcto";
 
 		modelAndView.addObject("texto", texto);
 		return modelAndView;
@@ -46,7 +46,7 @@ public class HomeController {
 	public ModelAndView dimeAlgo(@PathVariable("nombre") String nombre, @RequestParam("apellido") String apellido) {
 
 		ModelAndView modelAndView = new ModelAndView("miPagina");
-		modelAndView.addObject("texto", "has escrito " + nombre.toUpperCase() + "-" + apellido.toUpperCase()
+		modelAndView.addObject("texto", "Has escrito " + nombre.toUpperCase() + " " + apellido.toUpperCase()
 				+ " y tiene " + nombre.length() + " letras");
 
 		return modelAndView;
