@@ -34,9 +34,14 @@ public class HomeControllerTest {
 		
 		assertNotNull(homeController.home());
 	}
+<<<<<<< HEAD
 	
 	@Test
 	public void hola() {
 	assertNotNull
 	}
+=======
+
+	
+>>>>>>> master
 }
