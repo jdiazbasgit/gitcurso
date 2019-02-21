@@ -40,7 +40,7 @@ public class HomeController {
 	{
 		ModelAndView modelAndView= new ModelAndView();
 		
-		String texto="USUARIO ERRONELO";
+		String texto="USUARIO ERRONEO";
 		if(login.getUsuario().equals("pepe") &&  login.getClave().equals("1234"))
 		texto="USUARIO CORRECTO";
 		
