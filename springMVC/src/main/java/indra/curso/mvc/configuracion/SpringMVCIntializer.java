@@ -13,7 +13,7 @@ public class SpringMVCIntializer extends AbstractAnnotationConfigDispatcherServl
 	//@Override
 	protected Class<?>[] getServletConfigClasses() {
 		// TODO Auto-generated method stub
-		return null;
+		return new Class<?>[] {};
 	}
 
 	//@Override

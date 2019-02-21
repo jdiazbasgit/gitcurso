@@ -2,7 +2,8 @@ package indra.curso.mvc.beans;
 
 public class Login {
 	
-	private String usuario,clave;
+	private String usuario;
+	private String clave;
 
 	public String getUsuario() {
 		return usuario;
