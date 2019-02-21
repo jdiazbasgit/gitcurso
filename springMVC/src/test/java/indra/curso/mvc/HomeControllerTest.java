@@ -28,30 +28,11 @@ public class HomeControllerTest {
 	@Autowired
 	private HomeController homeController;
 	
-	private Login login=new Login();
-	//comentario de prueba 2
-	
 	@Test
 	public void testHome() {
 		
 		assertNotNull(homeController.home());
 	}
-	
-	@Test
-	public void testLogin() {
-		
-		login.setUsuario("pepe");
-		login.setClave("1234");
-		assertNotNull(homeController.login(login));
-	}
-	
-	@Test
-	public void testDimeAlgo() {
-		
-		assertNotNull(homeController.dimeAlgo(login.getUsuario(),login.getClave()));
-	}
-	
-	
 	
 	
 
