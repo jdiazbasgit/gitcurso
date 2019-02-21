@@ -1,5 +1,7 @@
 package indra.curso.mvc;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
@@ -12,6 +14,7 @@ import org.springframework.test.context.support.DependencyInjectionTestExecution
 import org.springframework.test.context.support.DirtiesContextTestExecutionListener;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import indra.curso.mvc.beans.Login;
 import indra.curso.mvc.configuracion.Configuracion;
 
 
@@ -27,12 +30,21 @@ public class HomeControllerTest {
 	@Autowired
 	private HomeController homeController;
 	
-	
+	private Login login;
 	
 	@Test
 	public void test() {
-		
+		String res = (String) homeController.dimeAlgo("looper", "looper").getModel().get("texto");
+		assertNotEquals("",res);
 		assertNotNull(homeController.home());
+	}
+	
+	@Test
+	public void testLogin() { 
+		login = new Login();
+		login.setUsuario("loop");
+		login.setClave("loop");
+		assertEquals("USUARIO CORRECTO", homeController.login(login).getModel().get("texto"));
 	}
 
 	
