@@ -29,7 +29,7 @@ public class HomeControllerTest {
 	private HomeController homeController;
 	
 	private Login login=new Login();
-	//JAVIER UN MANCO AL LOL
+	//comentario de prueba 2
 	
 	@Test
 	public void testHome() {
