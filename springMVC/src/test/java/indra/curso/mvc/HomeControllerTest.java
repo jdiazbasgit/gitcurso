@@ -27,9 +27,9 @@ public class HomeControllerTest {
 
 	@Autowired
 	private HomeController homeController;
-	// comentario de prueba
-	private Login login=new Login();
 	
+	private Login login=new Login();
+	//JAVIER UN MANCO AL LOL
 	
 	@Test
 	public void testHome() {
